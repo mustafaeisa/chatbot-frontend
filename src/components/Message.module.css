@@ -1,0 +1,96 @@
+.row {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  animation: fadeSlideUp 0.22s ease both;
+  max-width: 780px;
+  width: 100%;
+}
+
+.bot  { align-self: flex-start; }
+.user { align-self: flex-end; flex-direction: row-reverse; }
+
+/* ── Avatar ────────────────────────────────────────────────────────── */
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  background: var(--accent-dim);
+  border: 1px solid var(--user-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: var(--accent);
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+}
+
+.userAvatar {
+  background: var(--bg-raised);
+  border-color: var(--border-mid);
+  color: var(--text-3);
+  font-size: 9.5px;
+  letter-spacing: 0.04em;
+}
+
+/* ── Bubble ────────────────────────────────────────────────────────── */
+.bubble {
+  padding: 11px 15px;
+  border-radius: var(--radius-md);
+  max-width: calc(100% - 80px);
+  font-size: 14.5px;
+  line-height: 1.7;
+  word-break: break-word;
+}
+
+.botBubble {
+  background: var(--bot-bg);
+  border: 1px solid var(--border);
+  color: var(--text-1);
+  border-bottom-left-radius: 4px;
+}
+
+.userBubble {
+  background: var(--user-bg);
+  border: 1px solid var(--user-border);
+  color: var(--text-1);
+  border-bottom-right-radius: 4px;
+}
+
+.arabicText {
+  font-size: 15.5px;
+  line-height: 1.9;
+}
+
+.latinText {
+  letter-spacing: -0.01em;
+}
+
+/* ── Token meta ────────────────────────────────────────────────────── */
+.meta {
+  margin-top: 8px;
+  padding-top: 7px;
+  border-top: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-3);
+  direction: ltr;
+}
+
+/* ── Typing indicator ──────────────────────────────────────────────── */
+.typing {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 14px 18px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--text-3);
+  display: inline-block;
+  animation: pulse 1.1s ease-in-out infinite;
+}

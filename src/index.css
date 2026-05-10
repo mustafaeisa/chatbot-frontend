@@ -1,0 +1,67 @@
+/* ── Reset ─────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── Design Tokens ─────────────────────────────────────────────────── */
+:root {
+  --bg:           #0c0c0e;
+  --bg-surface:   #141417;
+  --bg-raised:    #1c1c21;
+  --bg-hover:     #222228;
+  --border:       rgba(255, 255, 255, 0.07);
+  --border-mid:   rgba(255, 255, 255, 0.13);
+  --accent:       #e8c468;
+  --accent-dim:   rgba(232, 196, 104, 0.1);
+  --accent-glow:  rgba(232, 196, 104, 0.22);
+  --text-1:       #f0ede8;
+  --text-2:       #9996a0;
+  --text-3:       #55535e;
+  --user-bg:      #1a1a24;
+  --user-border:  rgba(232, 196, 104, 0.18);
+  --bot-bg:       #14141a;
+  --error-bg:     rgba(239, 68, 68, 0.08);
+  --error-border: rgba(239, 68, 68, 0.2);
+  --error-text:   #f87171;
+  --font-sans:    'DM Sans', 'Noto Sans Arabic', sans-serif;
+  --font-arabic:  'Noto Sans Arabic', 'DM Sans', sans-serif;
+  --font-mono:    'DM Mono', monospace;
+  --radius-sm:    8px;
+  --radius-md:    14px;
+  --radius-lg:    20px;
+  --radius-pill:  100px;
+}
+
+/* ── Base ──────────────────────────────────────────────────────────── */
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-1);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Scrollbar ─────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border-mid); border-radius: 4px; }
+
+/* ── Keyframes ─────────────────────────────────────────────────────── */
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.25; transform: scale(0.8); }
+  50%       { opacity: 1;    transform: scale(1); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
