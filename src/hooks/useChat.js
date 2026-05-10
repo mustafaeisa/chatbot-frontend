@@ -1,6 +1,8 @@
 import { useState, useCallback } from "react";
 
-const API_URL = "/chat"; // proxied to http://chatbot-production-41ba.up.railway.app:8000/
+const API_URL = process.env.REACT_APP_API_URL
+  ? `${process.env.REACT_APP_API_URL}/chat`
+  : "/chat";
 export function useChat() {
   const [messages, setMessages] = useState([]);
   const [loading, setLoading]   = useState(false);
