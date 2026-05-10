@@ -1,7 +1,6 @@
 import { useState, useCallback } from "react";
 
-const API_URL = "/chat"; // proxied to http://localhost:8000 via package.json
-
+const API_URL = "/chat"; // proxied to http://chatbot-production-41ba.up.railway.app:8000/
 export function useChat() {
   const [messages, setMessages] = useState([]);
   const [loading, setLoading]   = useState(false);
@@ -12,7 +11,7 @@ export function useChat() {
       const trimmed = text.trim();
       if (!trimmed || loading) return;
 
-      setError(null);
+      setError(null); 
 
       const userMsg = { id: Date.now(), role: "user", content: trimmed };
       setMessages((prev) => [...prev, userMsg]);
